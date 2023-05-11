@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+
+<body>
+
+
+    <p>Analice y repare el código para que se impriman todos los valores excepto los número</p>
+
+    <p id="lista"></p>
+
+    <script>
+    const lista = ["a","b", "c", 1, "x",9,"d",4];
+    
+    let text = "";
+    for (let i = 0; i < lista.length; i++) {
+      text += lista[i] + "<br>";
+
+    }
+    
+    document.getElementById("lista").innerHTML = text; 
+    </script>
+
+
+
+
+
+<!-- FALTA : impriman todos los valores excepto los número -->
+
+<!--  CODIGO ORIGINAL 
+
+var lista = new Array ('a','b','c','1','x','9',’d’,’4);
+var item ;
+for (item in lista)
+{
+if (lista[item] == "1" or “9”)
+break;
+console.log(lista[item]);
+}
+
+
+-->
+
+
+
+</body>
+
+</html>
