@@ -10,9 +10,36 @@
 </head>
 
 <body>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
-        Your browser does not support the HTML canvas tag.
-        </canvas>
+<script>
+
+function dibujarRectangulo(ancho, alto) {
+  let result = '';
+
+  // linea de arriba
+  for (let i = 0; i < ancho; i++) {
+    result += '* ';
+  }
+
+  result += '\n';
+
+  // cuerpo del rectangulo
+  for (i = 0; i < alto - 2; i++) {
+    result += '*' + ' '.repeat(ancho * 2 - 3) + '*\n';
+  }
+
+  // linea de abajo
+  for (let i = 0; i < ancho; i++) {
+    result += '* ';
+  }
+
+  return result;
+}
+
+console.log(dibujarRectangulo(9, 6));
+
+
+
+</script>
 
 </body>
 
