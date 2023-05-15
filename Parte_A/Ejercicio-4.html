@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
 </head>
+
 <body>
 
-    <script>
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+  <script>
 
-// Creo un array para llevar la cuenta de los valores
-let valueAppearances = [];
+    function aleatorio(inferior, superior) {
 
-// inicializo el array con la cuenta de los valores a cero
-for (let index = 0; index < 50; index++) { // con 50 posiciones
-  valueAppearances.push(0);
-}
+      var numPosibilidades = superior - inferior;
+      var aleatorio = Math.random() * (numPosibilidades + 1);
+      aleatorio = Math.floor(aleatorio);
+      return inferior + aleatorio;
 
-// saco aleatorios un montón de veces
-for (let i = 0; i <= 7; i++) {
+      // Creo un array para llevar la cuenta de los valores
+      let arreglo50 = [];
 
-  // obtengo el aleatorio entre 1 y 6
-  let randomIndex = random(1, 6);
-  // incremento las apariciones de este valor
-  valueAppearances[randomIndex]++;
-}
-// muestro el array resultante, que debería tener más o menos las mismas apariciones
-// recuerda, para los índices entre 2 y 9
-console.log(valueAppearances);
-    </script>
+      // inicializo el array con la cuenta de los valores a cero
+      for (let index = 0; index < 10; index++) {
+        arreglo50.push(0);
+      }
 
-    
-    
+      // saco aleatorios un montón de veces
+      for (let i = 0; i <= 10000; i++) {
+
+        // obtengo el aleatorio entre 2 y 9
+        let randomIndex = random(1, 6);
+        // incremento las apariciones de este valor
+        arreglo50[randomIndex]++;
+      }
+
+    }
+
+  </script>
+
+
+
 </body>
+
 </html>
